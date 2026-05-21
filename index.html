@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ЙогаТиш | Курсы йоги для гармонии</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fefaf5;
+            color: #2e2a28;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e9dfce 0%, #d9c9b3 100%);
+            padding: 60px 0 80px;
+            text-align: center;
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: #2c3e2f;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #4a5b3e;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #5a7c5a;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .btn:hover {
+            background-color: #3f5a3f;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #f0e4d4;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #3a5a3a;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 70px;
+            height: 3px;
+            background-color: #c6ae8a;
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 28px;
+            padding: 30px 25px;
+            flex: 1 1 280px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            text-align: center;
+            border: 1px solid #f0e2d2;
+        }
+
+        .feature-card h3 {
+            font-size: 1.7rem;
+            margin-bottom: 15px;
+            color: #6b4c3b;
+        }
+
+        .schedule-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .schedule-item {
+            background: #fffaf5;
+            border-radius: 60px;
+            padding: 15px 30px;
+            text-align: center;
+            min-width: 180px;
+            border: 1px solid #e6d5c0;
+        }
+
+        .time {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: #8b694a;
+        }
+
+        .class-name {
+            font-size: 1rem;
+            color: #4e3e32;
+        }
+
+        .teachers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 32px;
+            padding: 25px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background-color: #ddd2c0;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #5a4a3a;
+        }
+
+        .teacher-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .review {
+            background: #ffffffdb;
+            border-radius: 40px;
+            padding: 28px;
+            max-width: 350px;
+            border: 1px solid #ecdbba;
+        }
+
+        .review p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .info-block {
+            flex: 1;
+            background: #fef6ec;
+            padding: 30px;
+            border-radius: 32px;
+        }
+
+        .info-block ul {
+            margin-left: 20px;
+            margin-top: 15px;
+        }
+
+        .info-block li {
+            margin: 12px 0;
+        }
+
+        .contact-info {
+            background: #e7dccc;
+            border-radius: 48px;
+            padding: 35px;
+            text-align: center;
+        }
+
+        .contact-details p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: #2e2a24;
+            color: #ccc2b5;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <h1>🧘‍♀️ ЙогаТиш</h1>
+        <p>Начните путь к гармонии тела и ума. Курсы для всех уровней в уютной студии.</p>
+        <button class="btn" onclick="scrollToSection('contact')">Записаться на пробное</button>
+    </div>
+</section>
+
+<div class="container">
+    <section id="benefits">
+        <h2 class="section-title">Почему выбирают нас</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🧘 Уникальные методики</h3>
+                <p>Проверенные временем техники, адаптированные под новичков и продвинутых практиков.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 Индивидуальный подход</h3>
+                <p>Учитываем твои цели и физические возможности для максимальной эффективности.</p>
+            </div>
+            <div class="feature-card">
+                <h3>☁️ Достижение гармонии</h3>
+                <p>Укрепляем тело, успокаиваем ум, находим внутренний баланс и равновесие.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2 class="section-title">Расписание занятий</h2>
+        <div class="schedule-grid">
+            <div class="schedule-item"><div class="time">08:00 – 08:30</div><div class="class-name">Утренняя йога</div></div>
+            <div class="schedule-item"><div class="time">08:30 – 10:00</div><div class="class-name">Дневная йога</div></div>
+            <div class="schedule-item"><div class="time">10:15 – 11:30</div><div class="class-name">Вечерняя йога</div></div>
+            <div class="schedule-item"><div class="time">11:30 – 12:30</div><div class="class-name">Йога выходного дня</div></div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; color: #6f5a48;">* Приходите за 10 минут до старта, чтобы спокойно подготовиться ✨</p>
+    </section>
+
+    <section id="teachers">
+        <h2 class="section-title">Наши преподаватели</h2>
+        <div class="teachers">
+            <div class="teacher-card"><div class="avatar">🧘‍♀️</div><h4>Анастасия Смирнова</h4><p>Преподаватель йоги, стаж 15+ лет. Помогает раскрыть гибкость и найти внутренний баланс.</p></div>
+            <div class="teacher-card"><div class="avatar">🧘‍♂️</div><h4>Иван Петров</h4><p>Эксперт по дыхательным практикам и медитации. Мягкое ведение в осознанность.</p></div>
+            <div class="teacher-card"><div class="avatar">🌸</div><h4>Ника Васильева</h4><p>Динамичные и энергичные уроки, помогает освоить сложные асаны с заботой о теле.</p></div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="section-title">Отзывы участников</h2>
+        <div class="reviews">
+            <div class="review"><p>«Занимаюсь йогой уже месяц и чувствую себя гораздо лучше! Спасибо за вдохновляющие занятия.»</p><h5>— Анна</h5></div>
+            <div class="review"><p>«Атмосфера как дома, очень душевно. Чувствую прогресс после каждой тренировки.»</p><h5>— Максим</h5></div>
+            <div class="review"><p>«Стала более гибкой и уверенной в себе. Огромная благодарность за терпение и поддержку!»</p><h5>— Екатерина</h5></div>
+            <div class="review"><p>«Идеальный способ расслабиться после рабочего дня. Лучшие курсы, которые я находил.»</p><h5>— Марат</h5></div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">Уникальность курсов</h2>
+        <div class="two-columns">
+            <div class="info-block">
+                <h3>🌟 Ключевые преимущества</h3>
+                <ul>
+                    <li><strong>Индивидуальный подход</strong> – уроки под твои возможности и цели</li>
+                    <li><strong>Профессиональные инструкторы</strong> – опытные наставники для твоего успеха</li>
+                    <li><strong>Разнообразие программ</strong> – от начинающих до опытных практиков</li>
+                </ul>
+            </div>
+            <div class="info-block">
+                <h3>📚 Методы обучения</h3>
+                <ul>
+                    <li>Групповые занятия, парные практики и мастер-классы</li>
+                    <li>Видеоуроки и методические пособия для дома</li>
+                    <li>Удобное расписание и поддержка тренера в чате</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p>📞 <strong>+7 495 123-45-68</strong></p>
+                <p>✉️ <strong>yoga@yogatish.ru</strong></p>
+                <p>📍 Бизнес-центр «Путь», ул. 11, Москва</p>
+                <p style="margin-top: 25px;">📱 Пишите в WhatsApp и Telegram</p>
+                <button class="btn" onclick="scrollToSection('contact')" style="margin-top: 20px;">Позвонить / Записаться</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>ЙогаТиш — студия гармонии и здоровья. Сделано с любовью к практике.</p>
+        <p style="margin-top: 8px;">Этот сайт — самостоятельная вёрстка по мотивам оригинального контента.</p>
+    </div>
+</footer>
+
+<script>
+    // Плавная прокрутка без изменения URL (убираем # из адресной строки)
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // Перехватываем клики по всем кнопкам с классом .btn, которые не обработаны отдельно
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            // Если у кнопки нет явного onclick, но она ведёт к контактам
+            if (!this.getAttribute('onclick')) {
+                e.preventDefault();
+                scrollToSection('contact');
+            }
+        });
+    });
+
+    // Дополнительно: если вдруг какая-то ссылка осталась — блокируем добавление #
+    document.querySelectorAll('a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+    });
+</script>
+</body>
+</html>
